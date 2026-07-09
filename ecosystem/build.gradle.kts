@@ -1,9 +1,9 @@
+// Code was made with Gemini
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinSerialization)
     id("kotlin-parcelize")
-    alias(libs.plugins.mavenPublish)
 }
 
 android {
@@ -12,7 +12,6 @@ android {
 
     defaultConfig {
         minSdk = 26
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -24,26 +23,13 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }
 
 dependencies {
     implementation(project(":lazyBundle"))
-
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
@@ -56,11 +42,10 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.material)
-
     testImplementation(libs.junit)
-
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 }
 
 ext["PUBLISH_ARTIFACT_ID"] = "ecosystem"
+apply(from = "${rootDir}/scripts/publish-common.gradle")

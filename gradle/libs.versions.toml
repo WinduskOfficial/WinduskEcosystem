@@ -15,7 +15,7 @@ lifecycleRuntimeVersion = "2.10.0"
 roomRuntime = "2.8.4"
 runtime = "1.11.2"
 hilt = "2.60"
-mavenPublish = "0.30.0"
+mavenPublish = "0.37.0"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
