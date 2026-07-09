@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <service
+            android:name=".Component"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.windusk.ecosystem.CENTAUR_ECOSYSTEM_ACCESS">
+            <intent-filter>
+                <action android:name="com.windusk.ecosystem.START_COMPONENT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

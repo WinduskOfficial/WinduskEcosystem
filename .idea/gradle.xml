@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/basics" />
+            <option value="$PROJECT_DIR$/biteUi" />
+            <option value="$PROJECT_DIR$/biteUiRender" />
+            <option value="$PROJECT_DIR$/clientBasics" />
+            <option value="$PROJECT_DIR$/componentBasics" />
+            <option value="$PROJECT_DIR$/ecosystem" />
+            <option value="$PROJECT_DIR$/lazyBundle" />
+            <option value="$PROJECT_DIR$/sharedFile" />
+            <option value="$PROJECT_DIR$/testclientapp" />
+            <option value="$PROJECT_DIR$/testcomponentapp" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
